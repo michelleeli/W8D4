@@ -9,13 +9,14 @@ export default class FlappyBird {
   }
 
   animate() {
-    // call animate on level class 
+    this.level.drawBackground(this.ctx)
   }
 
   restart() {
-    this.level.drawBackground(this.ctx);
-    // this.bird = new Bird;
-    // Game.animate(this.ctx);
+    this.animate();
+    const newBird = new Bird(canvas);
+    newBird.animate();
+    // this.animate(this.ctx);
   }
 }
 
